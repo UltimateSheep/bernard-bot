@@ -11,7 +11,7 @@ const calc_formula = {
     return a * b;
   },
   area_circle: function (a, b) {
-    return Math.PI * a * 2;
+    return Math.PI * a ** 2;
   },
 };
 

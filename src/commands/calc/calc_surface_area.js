@@ -13,6 +13,15 @@ const calc_formula = {
   area_prism: function (h, b, d) {
     return 2 * (h * b) + 2 * (b * d) + 2 * (h * d);
   },
+  area_square: function (a, b) {
+    return a * 4;
+  },
+  area_rectangle: function (a, b) {
+    return a * 2 + b * 2;
+  },
+  area_circle: function (a, b) {
+    return Math.PI * a * 2;
+  },
 };
 
 module.exports = {
@@ -28,7 +37,10 @@ module.exports = {
           { name: "prism", value: "area_prism" },
           { name: "cylinder", value: "area_cylinder" },
           { name: "pyramid", value: "area_pyramid" },
-          { name: "sphere", value: "area_sphere" }
+          { name: "sphere", value: "area_sphere" },
+          { name: "square", value: "area_square" },
+          { name: "rectangle", value: "area_rectangle" },
+          { name: "circle", value: "area_circle" }
         )
     )
     .addNumberOption((option) =>
@@ -41,7 +53,7 @@ module.exports = {
       option
         .setName("value2")
         .setDescription(
-          "width/base (if you selected sphere just put in any number)"
+          "width/base (if you selected square/sphere just put in any number)"
         )
         .setRequired(true)
     )
@@ -49,7 +61,7 @@ module.exports = {
       option
         .setName("value3")
         .setDescription(
-          "depth (if you selected sphere/cylinder/pyramid just put in any number)"
+          "depth (if you selected sphere/cylinder/pyramid or 2d just put in any number)"
         )
         .setRequired(true)
     ),
