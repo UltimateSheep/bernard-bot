@@ -18,7 +18,7 @@ const calc_formula = {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("calculate_volume")
-    .setDescription("example: /calcualte_area  prism 5 5 5")
+    .setDescription("example: /calcualte_area prism 5 5 5")
     .addStringOption((option) =>
       option
         .setName("shape")

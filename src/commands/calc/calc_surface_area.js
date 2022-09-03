@@ -7,7 +7,7 @@ const calc_formula = {
   area_cylinder: function (r, h, b) {
     return Math.PI * r * 2 * h + 2 * (Math.PI * r ** 2);
   },
-  area_pyramid: function (b, h, c) {
+  area_pyramid: function (h, b, c) {
     return (1 / 2) * b * h * 4 + b ** 2;
   },
   area_prism: function (h, b, d) {
@@ -41,7 +41,7 @@ module.exports = {
       option
         .setName("value2")
         .setDescription(
-          "width/base/height in some cylinder/pyramid (if you selected sphere just put in any number)"
+          "width/base (if you selected sphere just put in any number)"
         )
         .setRequired(true)
     )
