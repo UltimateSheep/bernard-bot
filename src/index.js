@@ -1,3 +1,5 @@
+
+const keepAlive = require("./server")
 require("dotenv").config();
 
 const { token } = process.env;
@@ -50,3 +52,4 @@ client.handleEvents();
 client.handleCommands(client);
 
 client.login(token);
+keepAlive()
